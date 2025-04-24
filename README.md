@@ -66,6 +66,7 @@ python src/fruit_veg_detector.py
 # +/- - Adjust confidence threshold
 # c - Clear cart
 ```
+![image](https://github.com/user-attachments/assets/e997b7d1-dbd6-44fc-a57a-8588753dec5e)
 
 ## Dataset Analysis
 
