@@ -15,7 +15,8 @@ Real-time fruit and vegetable detection with price calculation using YOLOv8.
 Location: `C:\Yolo\dataset fruits and vegetables`
 
 Format: YOLOv8 (train/valid folders with images and labels)
-
+link of the dataset
+https://www.kaggle.com/datasets/kvnpatel/fruits-vegetable-detection-for-yolov4
 ## Requirements
 
 ```
