@@ -1,0 +1,14 @@
+# Core dependencies for both webcam and Pi camera implementations
+ultralytics>=8.0.0
+opencv-python>=4.5.0
+numpy>=1.20.0
+PyYAML>=6.0
+matplotlib>=3.5.0
+
+# Raspberry Pi Camera dependencies (for yolo_picamera2_detector.py)
+# These should be installed on Raspberry Pi systems
+# picamera2  # Install via: sudo apt install python3-picamera2
+# libcamera  # Should be included with picamera2 on RPi OS
+
+# Optional audio feedback (install with: sudo apt install espeak-ng)
+# espeak-ng
