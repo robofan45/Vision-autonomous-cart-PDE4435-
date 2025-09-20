@@ -158,6 +158,58 @@ Vision-autonomous-cart-PDE4435-/
 └── out.mp4                 # Video output from Pi camera detector
 ```
 
+## Troubleshooting
+
+### Raspberry Pi Camera Issues
+
+1. **Camera not detected**:
+   ```bash
+   # Enable camera interface
+   sudo raspi-config
+   # Navigate to Interface Options > Camera > Enable
+   
+   # Check camera connection
+   libcamera-hello --list-cameras
+   ```
+
+2. **Permission errors**:
+   ```bash
+   # Add user to video group
+   sudo usermod -a -G video $USER
+   # Logout and login again
+   ```
+
+3. **Autofocus not working**:
+   - Ensure you have RPi Camera Module 3 (not v1 or v2)
+   - Check that libcamera is up to date:
+     ```bash
+     sudo apt update && sudo apt upgrade
+     ```
+
+4. **Audio feedback not working**:
+   ```bash
+   # Install espeak-ng
+   sudo apt install espeak-ng
+   
+   # Test audio
+   espeak-ng "Hello world"
+   ```
+
+### General Issues
+
+1. **ModuleNotFoundError**:
+   ```bash
+   # Install missing dependencies
+   pip install -r requirements.txt
+   
+   # For Pi-specific modules
+   sudo apt install python3-picamera2
+   ```
+
+2. **Model not found**:
+   - The script will automatically download yolo11n.pt or yolov8n.pt
+   - For custom models, use: `--model /path/to/your/model.pt`
+
 ## License
 
 MIT License
